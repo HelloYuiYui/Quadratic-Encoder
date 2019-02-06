@@ -1,23 +1,48 @@
-var e = require("./save.js");
-var base = 17;
-var width = 10;
+var quad = require("./save.js");
 
-var test = ["test values", "today we came here", "to celebrate our test", "values are a bit longer", "than I expected", "but its fine", "finally azman.", "bbbaaa", " a", " a b c a b c", "jok"];
+var abc = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "w", "v", "y", "z", "q", "x", " ", ",", ".", "!", "?"];
 
-var jsonised = JSON.stringify({"key":e.encode(17, 10, "elma")});
+//var base = 72;
+//var width = 47;
 
-var parsed = JSON.parse(jsonised);
+var c = 0;
+var fail = 0;
 
-/*
-for(i=0; i<test.length; i++) {
-    console.log(e.encode(base, width, test[i]) + "/n");
-    console.log(i + " " + test.length + " " + test[i]);
+while (c<=700000) {
+    var t = "";
+    var base = 72;
+    var width = 47;
+    
+    for (i=0; i<100; i++) {
+        var random = abc[Math.floor(Math.random() * abc.length)];
+        var b = Math.floor(Math.random() * 50) + 25;
+        var w = Math.floor(Math.random() * 50) + 25;
+        t += random;
+        base = b;
+        width = w;
+    }
+
+    var code = quad.encode(base, width, t);
+
+    //console.log(code);
+
+    var sol = quad.decode(base, width, code);
+
+    //console.log(sol);
+
+    if (sol != t) {
+        fail++;
+        console.log(c + " -- " + fail + " failure, base: " + base + ", width: " + width);
+        console.log(t);
+        console.log(sol);
+        console.log(code);
+    } else {
+        //console.log(c + " -- " + fail + " failure, base: " + base + ", width: " + width);
+        var a = "a";
+    }
+    
+    c++;
+    t = "";
 }
-*/
 
-var i = 0;
-/*
-while (i<test.length) {
-    console.log(e.encode(base, width, test[i]));
-    i++;
-}*/
+console.log("done.");
