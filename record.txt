@@ -1,3 +1,5 @@
+text lenght = 100 for all.
+
 Session 1:
 
 b w = 72 47 respectively
@@ -56,5 +58,34 @@ precision = 100000 (5)
 100000 - 0
 100000 - 2  // renewed the alphabet to include capital letters and more punctiation marks.
 100000 - 0
+100000 - 0
+100000 - 0
+100000 - 0
+100000 - 0
+100000 - 0
+
+Total: 
+1000000 - 2
+0.0002%
+
+Session 5:
+
+b w = random (100 - 10000 for w and 1 - 10000 for b)
+precision = 1000
+
+100000 - 0
+100000 - 0
+100000 - 0
+500000 - 0
+300000 - 1
+
+500000 - 1
+500000 - 2
+
+300000 - 0
+
+Total:
+2300000 - 3
+0.00015%
 
 

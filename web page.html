@@ -8,16 +8,21 @@
             input {
                 margin: 20px;
             }
+            
+            #t {
+                height: 50px;
+                width: 200px;
+            }
         
         </style>
         <script src="index.js"></script>
     </head>
     <body>
         <p>
-        Base: <input id="b" value="10"><br>
-        Width: <input id="w" value="10"><br>
+        Base: <input id="b" type="number" value="10"><br>
+        Width: <input id="w" type="number" value="10"><br>
         Precision: <input id="p" value="100000"><br>
-        Encode: <input id="t" value="abcde"></p>
+        Encode: <input id="t" type="text" value="european union"></p>
         <button onclick="enc();">Encode</button>
         <button onclick="dec();">Decode</button><br>
         <p id="en"></p>
