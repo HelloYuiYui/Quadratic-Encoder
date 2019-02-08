@@ -1,0 +1,8 @@
+
+// Values below work well with 1 precision so might be useful to keep the data shorter.
+
+Base - Width
+Tested X times, Y char long texts
+
+640 - 340
+Tested 30000 times, 1000 character long texts

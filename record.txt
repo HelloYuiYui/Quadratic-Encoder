@@ -1,0 +1,60 @@
+Session 1:
+
+b w = 72 47 respectively
+precision = 100000 (5)
+
+10000 - 4
+10000 - 4
+10000 - 0
+10000 - 2
+10000 - 1
+10000 - 2
+40000 - 11
+
+Total:
+100000 - 24
+0.024%
+
+Session 2:
+
+b w = random (25 - 75)
+precision = 100000 (5)
+
+100000 - 15
+100000 - 21
+100000 - 24
+700000 - 155
+
+Total:
+1000000 - 215
+0.0215%
+
+// fixed the rounding bug that caused letter shift.
+Session 3:
+
+b w = random (25 - 1000 for w and 1 - 1000 for b)
+precision = 1000000 (6)
+
+100000 - 0
+100000 - 0
+100000 - 1
+100000 - 0
+100000 - 0
+200000 - 1
+500000 - 3
+
+Total:
+1200000 - 5
+0.00047%
+
+Session 4:
+
+b w = random (25 - 1000 for w and 1 - 1000 for b)
+precision = 100000 (5)
+
+200000 - 0
+100000 - 0
+100000 - 2  // renewed the alphabet to include capital letters and more punctiation marks.
+100000 - 0
+
+
