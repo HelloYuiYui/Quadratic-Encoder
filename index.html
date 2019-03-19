@@ -3,6 +3,8 @@
         <title>Quadratic Encryptor</title>
         <meta name="author" content="Enes Ihsan Aydogan">
         <meta name="application-name" content="Quadratic-Encryptor">
+        <meta charset="utf-8">
+        <script type="text/javascript" src="qrious/dist/qrious.js"></script>
         <style>
             * {
                 margin: 5px;
@@ -10,19 +12,50 @@
             
             input {
                 margin: 20px;
-            }        
+            }
+            
+            #en, #de, #check {
+                font-size: 24px;
+                width: 80vw;
+                height: 100px;
+                word-break: break-all;
+            }
+            
+            #qr {
+                float: right;
+                margin: 30px 70px 0 0;
+            }
         </style>
         <script src="quadratic-encrypot-web.js"></script>
     </head>
     <body>
+        <canvas id="qr"></canvas>
         <p>
-        Base: <input id="b" type="number" value="10"><br>
-        Width: <input id="w" type="number" value="10"><br>
-        Precision: <input id="p" value="100000"><br>
-        Encode: <input id="t" type="text" value="european union"></p>
-        <button onclick="enc();">Encode</button>
-        <button onclick="dec();">Decode</button><br>
-        <p id="en"></p>
-        <p id="de"></p>
+        Base: <input id="b" type="number" value="49"><br>
+        Width: <input id="w" type="number" value="24"><br>
+        Precision: <input id="p" value="1000"><br>
+        Text: <input id="t" type="text" value="european union"></p>
+        Encoding: <select id="encode">
+            <option value="none">None</option>
+            <option value="latin">Latin</option>
+            <option value="cyrillic">Cyrillic</option>
+            <option value="greek">Greek</option>
+            <option value="armenian">Armenian</option>
+            <option value="hebrew">Hebrew</option>
+            <option value="devangari">Devangari</option>
+            <option value="thai">Thai</option>
+            <option value="japanese">Japanese</option>
+            <option value="korean">Korean</option>
+            <option value="chinese">Chinese</option>
+            <option value="vietnamese">Vietnamese</option>
+            <option value="maths">Maths</option>
+            <option value="mixedNumbers">Mixed Numbers</option>
+        </select><input placeholder="or custom (13) characters" id="customCharset"><br><br>
+        <button onclick="enc(); dec();">Encode</button>
+        <button onclick="dec2();">Decode</button><br><br>
+        <span id="de"></span><br><br>
+        <span id="en"></span><br><br>
+        <span id="check"></span>
     </body>
+
 </html>
